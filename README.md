@@ -1,20 +1,21 @@
 # Album App created using React
 
 # Folder structure
-│   .gitignore<br>
-│   package-lock.json<br>
-│   package.json<br>
-│   README.md<br>
-│<br>
-├───public<br>
-│       favicon.ico<br>
-│       index.html<br>
-│       logo192.png<br>
-│       logo512.png<br>
-│       manifest.json<br>
-│       robots.txt<br>
-│<br>
-└───src<br>
+```
+│   .gitignore
+│   package-lock.json
+│   package.json
+│   README.md
+│
+├───public
+│   │   favicon.ico
+│   │   index.html
+│   │   logo192.png
+│   │   logo512.png
+│   │   manifest.json
+│   │   robots.txt
+│
+└───src
     │   App.css
     │   App.js
     │   App.test.js
@@ -26,13 +27,13 @@
     │
     ├───components
     │   ├───addEdit
-    │   │       AddEdit.js
-    │   │       AddEdit.module.css
+    │   │   │   AddEdit.js
+    │   │   │   AddEdit.module.css
     │   │
     │   ├───albums
-    │   │       AlbumItem.js
-    │   │       Albums.js
-    │   │       Albums.module.css
+    │   │   │   AlbumItem.js
+    │   │   │   Albums.js
+    │   │   │   Albums.module.css
     │   │
     │   └───Loader
     │           Loader.js
@@ -47,6 +48,8 @@
         └───reducers
                 albumReducer.js
                 notificationReducer.js
+
+```
 
 
 # Getting Started with Create React App and Redux
