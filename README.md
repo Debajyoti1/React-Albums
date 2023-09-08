@@ -1,3 +1,54 @@
+# Album App created using React
+
+# Folder structure
+│   .gitignore
+│   package-lock.json
+│   package.json
+│   README.md
+│
+├───public
+│       favicon.ico
+│       index.html
+│       logo192.png
+│       logo512.png
+│       manifest.json
+│       robots.txt
+│
+└───src
+    │   App.css
+    │   App.js
+    │   App.test.js
+    │   index.css
+    │   index.js
+    │   logo.svg
+    │   reportWebVitals.js
+    │   setupTests.js
+    │
+    ├───components
+    │   ├───addEdit
+    │   │       AddEdit.js
+    │   │       AddEdit.module.css
+    │   │
+    │   ├───albums
+    │   │       AlbumItem.js
+    │   │       Albums.js
+    │   │       Albums.module.css
+    │   │
+    │   └───Loader
+    │           Loader.js
+    │
+    ├───pages
+    │       Error404.js
+    │       Error404.module.css
+    │
+    └───redux
+        │   store.js
+        │
+        └───reducers
+                albumReducer.js
+                notificationReducer.js
+
+
 # Getting Started with Create React App and Redux
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
