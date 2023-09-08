@@ -1,6 +1,7 @@
-# Album App created using React
+## Album App created using React
 
-# Folder structure
+### Folder structure
+
 ```
 │   .gitignore
 │   package-lock.json
