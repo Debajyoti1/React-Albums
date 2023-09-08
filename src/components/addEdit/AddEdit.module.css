@@ -1,0 +1,33 @@
+.addEditContainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.addEditContainer .itemButtonContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.itemButtonContainer button{
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+.addEditContainer input[type="text"],input[type="number"]{
+  width: 100%;
+  padding: 10px;
+    margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}

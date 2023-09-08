@@ -1,22 +1,23 @@
-import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { fetchAllAlbums } from "../../redux/reducers/albumReducer";
-import { albumSelector } from "../../redux/reducers/albumReducer";
+import { useDispatch, useSelector } from "react-redux";
+import { albumSelector, fetchAllAlbums } from "../../redux/reducers/albumReducer";
 import AlbumItem from "./AlbumItem";
-import styles from 'Albums.module.css'
+import styles from './Albums.module.css';
 export const AlbumList = () => {
     const dispatch = useDispatch();
+    const { albums } = useSelector(albumSelector);
     useEffect(() => {
-        dispatch(fetchAllAlbums());
-    }, []);
-
-    const { albums, isLoading } = useSelector(albumSelector);
+        dispatch(fetchAllAlbums(albums));
+    },[]);
 
     return (
-        <div className="">
-            {albums.map((album, i) => (
-                <AlbumItem key={album.id} album={album} /> // Use key prop to uniquely identify each item
-            ))}
-        </div>
+        <>
+            <h1 style={{ textAlign: 'center' }}>Albums</h1>
+            <div className={styles.albumsContainer}>
+                {albums.map((album, i) => (
+                    <AlbumItem key={album.id} album={album} /> // Use key prop to uniquely identify each item
+                ))}
+            </div>
+        </>
     );
 };
