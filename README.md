@@ -1,20 +1,20 @@
 # Album App created using React
 
 # Folder structure
-│   .gitignore
-│   package-lock.json
-│   package.json
-│   README.md
-│
-├───public
-│       favicon.ico
-│       index.html
-│       logo192.png
-│       logo512.png
-│       manifest.json
-│       robots.txt
-│
-└───src
+│   .gitignore<br>
+│   package-lock.json<br>
+│   package.json<br>
+│   README.md<br>
+│<br>
+├───public<br>
+│       favicon.ico<br>
+│       index.html<br>
+│       logo192.png<br>
+│       logo512.png<br>
+│       manifest.json<br>
+│       robots.txt<br>
+│<br>
+└───src<br>
     │   App.css
     │   App.js
     │   App.test.js
