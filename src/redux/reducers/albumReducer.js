@@ -17,7 +17,7 @@ export const fetchAllAlbums = createAsyncThunk(
                 let res = await fetch(albumURI);
                 let data = await res.json();
                 thunkAPI.dispatch(albumActions.setAllAlbums(data));
-                thunkAPI.dispatch(albumActions.setNotification({ success: 'Albums fetched' }));
+                // thunkAPI.dispatch(albumActions.setNotification({ success: 'Albums fetched' }));
             } catch (error) {
                 console.log(error);
                 thunkAPI.dispatch(albumActions.setAllAlbums([]));
