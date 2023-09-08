@@ -15,14 +15,21 @@ const notificationSlice = createSlice({
       state.success_notification = null;
     },
   },
-  extraReducers: {
-    [albumActions.setNotification]: (state, action) => {
+  extraReducers: (builder) => {
+    builder.addCase(albumActions.setNotification, (state, action) => {
       if (action.payload.success) {
         state.success_notification = action.payload.success;
       } else if (action.payload.error) {
         state.error_notification = action.payload.error;
       }
-    }
+    })
+    // [albumActions.setNotification]: (state, action) => {
+    //   if (action.payload.success) {
+    //     state.success_notification = action.payload.success;
+    //   } else if (action.payload.error) {
+    //     state.error_notification = action.payload.error;
+    //   }
+    // }
   }
 });
 
