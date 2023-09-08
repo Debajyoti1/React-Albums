@@ -55,4 +55,27 @@
     background-color: black;
     color: white;
     padding: 5px;
+    cursor: pointer;
+
+}
+.addEditButton{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin: 10px;
+}
+.addEditButton button{
+    background-color: black;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+
+}
+.addEditButton button a{
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
 }

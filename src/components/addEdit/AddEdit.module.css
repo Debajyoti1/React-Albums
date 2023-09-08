@@ -21,6 +21,8 @@
     background-color: black;
     color: white;
     padding: 5px;
+    cursor: pointer;
+
 }
 
 .addEditContainer input[type="text"],input[type="number"]{
@@ -30,4 +32,12 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+}
+
+.imageCenter{
+  display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
 }

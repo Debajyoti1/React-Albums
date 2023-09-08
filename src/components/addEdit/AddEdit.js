@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { albumActions } from '../../redux/reducers/albumReducer';
 import styles from './AddEdit.module.css';
-import { addAlbum,updateAlbum } from '../../redux/reducers/albumReducer';
+import { addAlbum, updateAlbum } from '../../redux/reducers/albumReducer';
 export const AddEdit = () => {
   // Hooks
   const navigate = useNavigate();
@@ -27,7 +27,7 @@ export const AddEdit = () => {
 
     } else {
       const newAlbum = { userId, id, title };
-        dispatch(addAlbum(newAlbum))        
+      dispatch(addAlbum(newAlbum))
     }
     navigate('/')
   };
@@ -35,6 +35,9 @@ export const AddEdit = () => {
   return (
     <>
       <h1 style={{ textAlign: 'center' }}>{type || 'Add'} Form</h1>
+      <div className={styles.imageCenter}>
+        <img src="https://cdn-icons-png.flaticon.com/512/1358/1358994.png" width="256" height="256" alt='album'></img>
+      </div>
       <div className={styles.addEditContainer}>
         <input
           type="number"
@@ -59,8 +62,8 @@ export const AddEdit = () => {
           required
         />
         <div className={styles.itemButtonContainer}>
-          <button onClick={() => navigate('/')}>Back</button>
-          <button onClick={handleAddEdit}>{type || 'Add'}</button>
+          <button onClick={() => navigate('/')}>Back <img src="   https://cdn-icons-png.flaticon.com/512/2879/2879564.png " width="15" height="15" alt="back"></img></button>
+          <button onClick={handleAddEdit}>{type || 'Add'} <img src="   https://cdn-icons-png.flaticon.com/512/489/489707.png " width="15" height="15" alt="save" ></img></button>
         </div>
       </div>
     </>
