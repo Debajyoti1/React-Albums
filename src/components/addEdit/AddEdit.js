@@ -4,8 +4,9 @@ import { useDispatch } from 'react-redux';
 import { albumActions } from '../../redux/reducers/albumReducer';
 import styles from './AddEdit.module.css';
 import { addAlbum, updateAlbum } from '../../redux/reducers/albumReducer';
+
 export const AddEdit = () => {
-  // Hooks
+  // React Hooks for navigation, location, and Redux dispatch
   const navigate = useNavigate();
   const location = useLocation();
   const dispatch = useDispatch();
@@ -15,29 +16,41 @@ export const AddEdit = () => {
   const [id, setId] = useState(location.state?.album?.id || '');
   const [title, setTitle] = useState(location.state?.album?.title || '');
 
-  // Extract type from location state. If type is sent, then that must be update request
+  // Extract type from location state. If type is sent, it's an update request
   const type = location.state?.type;
 
   // Handle Add/Edit button click
   const handleAddEdit = () => {
     if (type) {
-      // Dispatch the action with the updated album data
+      // Dispatch an action to update the album data
       const updatedAlbum = { userId, id, title };
       dispatch(updateAlbum(updatedAlbum));
-
     } else {
+      // Dispatch an action to add a new album
       const newAlbum = { userId, id, title };
-      dispatch(addAlbum(newAlbum))
+      dispatch(addAlbum(newAlbum));
     }
-    navigate('/')
+
+    // Navigate back to the main page
+    navigate('/');
   };
 
   return (
     <>
+      {/* Page title */}
       <h1 style={{ textAlign: 'center' }}>{type || 'Add'} Form</h1>
+
+      {/* Image */}
       <div className={styles.imageCenter}>
-        <img src="https://cdn-icons-png.flaticon.com/512/1358/1358994.png" width="256" height="256" alt='album'></img>
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/1358/1358994.png"
+          width="256"
+          height="256"
+          alt="album"
+        ></img>
       </div>
+
+      {/* Form container */}
       <div className={styles.addEditContainer}>
         <input
           type="number"
@@ -61,9 +74,27 @@ export const AddEdit = () => {
           onChange={(e) => setTitle(e.target.value)}
           required
         />
+
+        {/* Back and Add/Edit buttons */}
         <div className={styles.itemButtonContainer}>
-          <button onClick={() => navigate('/')}>Back <img src="   https://cdn-icons-png.flaticon.com/512/2879/2879564.png " width="15" height="15" alt="back"></img></button>
-          <button onClick={handleAddEdit}>{type || 'Add'} <img src="   https://cdn-icons-png.flaticon.com/512/489/489707.png " width="15" height="15" alt="save" ></img></button>
+          <button onClick={() => navigate('/')}>
+            Back{' '}
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/2879/2879564.png"
+              width="15"
+              height="15"
+              alt="back"
+            ></img>
+          </button>
+          <button onClick={handleAddEdit}>
+            {type || 'Add'}{' '}
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/489/489707.png"
+              width="15"
+              height="15"
+              alt="save"
+            ></img>
+          </button>
         </div>
       </div>
     </>
